@@ -1,5 +1,5 @@
 # Nginx-Docker-web-deployment
-Hosting a simple static website inside docker using nginx by using a Dockerfile to create image
+Cloned git repo inside alpine and deployed using nginx 
 
 What is Docker and why I used it instead of directly installing nginx on host?
 
