@@ -1,0 +1,4 @@
+# apk update
+# apk add nginx
+# adduser -g 'Nginx www user' -h /home/www/ wwwcbz
+
