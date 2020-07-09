@@ -1,23 +1,25 @@
-# Nginx-Docker-web-deployment
-Hosting a simple static website inside docker using nginx by using a Dockerfile to create image
+# Alpine git nginx web deployment
 
-What is Docker and why I used it instead of directly installing nginx on host?
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-Docker is a tool designed to make it easier to create, deploy and run applications by using containers.
+## General info
+This project uses alpine linux which uses it to clone a repository and deploys those static web files using nginx as server.
+	
+## Technologies
+Project is created with:
+* Docker: 19.03.12
+* Alpine: 3.12.0
 
-A container consists of an entire runtime environment: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package. 
+	
+## Setup
+To run this project, install it locally run the following commands:
 
-By containerizing the application platform and its dependencies, differences in OS distributions and underlying infrastructure are abstracted away.
-
-In addition, Docker has been designed in a way that it can be incorporated into most DevOps applications, including Puppet, Chef, Vagrant, and Ansible, or it can be used on its own to manage development environments.
-Benefits of using docker:
-
-1. More efficient use of system resources
-
-2. Speed
-
-3. Faster software delivery cycles
-
-4. Application portability
-
-5. Makes implementing microservices architecture easier
+```
+$ git clone https://github.com/Vedant-Mhatre/Alpine-git-Nginx-deployment.git
+$ cd Alpine-git-Nginx-deployment
+$ docker build -t alpine:v1 .
+$ docker run -d -p 8081:80 alpine:v1
+```
