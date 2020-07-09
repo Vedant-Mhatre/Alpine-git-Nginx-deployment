@@ -1,16 +1,19 @@
 FROM alpine:latest
-RUN apk update 
-RUN apk add nginx 
-RUN apk add git
-RUN apk add openrc --no-cache
 
-adduser -D -g 'www' www;mkdir /www;chown -R www:www /var/lib/nginx;chown -R www:www /www;mkdir -p /run/nginx
+RUN	apk update && \
+			apk add nginx && \
+			apk add git;
 
-RUN cd /www/ ;git clone https://github.com/Vedant-Mhatre/Sample-Html-Css-Website.git
+RUN	adduser -D -g 'www' www && \
+			mkdir /www && \
+			chown -R www:www /var/lib/nginx && \
+			chown -R www:www /www && \
+			mkdir -p /run/nginx;
 
+RUN	cd /www/ && \
+			git clone https://github.com/Vedant-Mhatre/Sample-Html-Css-Website.git
 
-RUN mv /www/Sample-Html-Css-Website/nginx.conf  /etc/nginx/nginx.conf
+RUN	mv /www/Sample-Html-Css-Website/nginx.conf  /etc/nginx/nginx.conf
 
-
-RUN nginx -t
+CMD ["nginx"]
 
