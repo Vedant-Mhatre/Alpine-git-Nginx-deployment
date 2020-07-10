@@ -12,9 +12,22 @@ This project uses alpine linux which uses it to clone a repository and deploys t
 * [Why Nginx?](#why-nginx?)
 	
 ## Why Docker?
-abcd
+1. More efficient use of system resources
+
+2. Light weight system that starts fast
+
+3. Faster software delivery cycles
+
+4. Application portability
 
 ## Why Alpine?
+1. Small
+
+2. Simple
+
+3. Secure
+
+## Why Nginx?
 asd
 
 
