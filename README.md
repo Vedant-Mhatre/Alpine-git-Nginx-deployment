@@ -7,9 +7,9 @@
 
 ## General info
 This project uses alpine linux which uses it to clone a repository and deploys those static web files using nginx as server.
-* [Why Docker?](#why-docker?)
-* [Why Alpine?](#why-alpine?)
-* [Why Nginx?](#why-nginx?)
+* [Why Docker?](#why docker?)
+* [Why Alpine?](#why alpine?)
+* [Why Nginx?](#why nginx?)
 	
 ## Why Docker?
 1. More efficient use of system resources
