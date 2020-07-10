@@ -7,9 +7,9 @@
 
 ## General info
 This project uses alpine linux which uses it to clone a repository and deploys those static web files using nginx as server.
-* [Why Docker?](#Why\ Docker?)
+* [Why Docker?](#why-docker)
 * [Why Alpine?](#why-alpine)
-* [Why Nginx?](#Why-Nginx?)
+* [Why Nginx?](#why-nginx)
 	
 ## Why Docker?
 1. More efficient use of system resources
@@ -52,12 +52,13 @@ $ cd Alpine-git-Nginx-deployment
 ```
 
 Step 2:
-Build image with name alpine and tag v1, . specifies to location of dockerfile 
-```$ docker build -t alpine:v1 .
+Build image with name alpine and tag v1, '.' specifies to location of dockerfile 
+```
+$ docker build -t alpine:v1 .
 ```
 
 Step 3:
 Run the built image and connect it to your localhost on port 8081
-```$ docker run -d -p 8081:80 alpine:v1
-
+```
+$ docker run -d -p 8081:80 alpine:v1
 ```
