@@ -10,7 +10,7 @@ This project uses alpine linux which uses it to clone a repository and deploys t
 	
 In Development folder, user can pass their github repository name while building image and alpine linux clones that repo and uses nginx to deploy the website.
 
-In Production folder, user can pass their github repository name while running image and the rest same as above. If user does not pass github repo name a sample website is cloned from my github repo (#github.com/Vedant-Mhatre/Sample-Html-Css-Website)
+In Production folder, user can pass their github repository name while running image and the rest same as above. If user does not pass github repo name a sample website is cloned from my [github repo](github.com/Vedant-Mhatre/Sample-Html-Css-Website)
 
 
 ## Technologies
