@@ -1,24 +1,24 @@
 FROM alpine
 
 RUN apk update && \
-  apk add nginx && \
-			apk add git && \
-			apk add wget && \
-			apk add sed;
+	apk add nginx && \
+	apk add git && \
+	apk add wget && \
+	apk add sed;
 
 RUN	adduser -D -g 'www' www && \
-			mkdir /www && \
-			chown -R www:www /var/lib/nginx && \
-			chown -R www:www /www && \
-			mkdir -p /run/nginx && \
-			wget vedant-mhatre.github.io/Sample-Html-Css-Website/nginx.conf && \
-			mv nginx.conf /etc/nginx/nginx.conf
+	mkdir /www && \
+	chown -R www:www /var/lib/nginx && \
+	chown -R www:www /www && \
+	mkdir -p /run/nginx && \
+	wget vedant-mhatre.github.io/Sample-Html-Css-Website/nginx.conf && \
+	mv nginx.conf /etc/nginx/nginx.conf
 
 ARG REPONAME=Sample-Html-Css-Website
 ENV REPONAME=$REPONAME
 
 RUN	cd /www/ && \
-			git clone https://github.com/Vedant-Mhatre/${REPONAME}.git	
+	git clone https://g	ithub.com/Vedant-Mhatre/${REPONAME}.git	
 
 RUN sed -i "s/Sample-Html-Css-Website/${REPONAME}/" /etc/nginx/nginx.conf 
 
