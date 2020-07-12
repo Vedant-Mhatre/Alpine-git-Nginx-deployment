@@ -1,3 +1,0 @@
-RUN	  /etc/nginx/nginx.conf
-
-CMD ["nginx"]
