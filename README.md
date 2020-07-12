@@ -7,38 +7,15 @@
 
 ## General info
 This project uses alpine linux which uses it to clone a repository and deploys those static web files using nginx as server.
-* [Why Docker?](#why-docker)
-* [Why Alpine?](#why-alpine)
-* [Why Nginx?](#why-nginx)
 	
-## Why Docker?
-1. More efficient use of system resources
+In Development folder, user can pass their github repository name while building image and alpine linux clones that repo and uses nginx to deploy the website.
 
-2. Light weight system that starts fast
-
-3. Faster software delivery cycles
-
-4. Application portability
-
-## Why Alpine?
-1. Small Size: less than 8 MB
-
-2. Simple: built around musl libc and busybox using it's own package manager APK which is easy to use
-
-3. Secure
-
-## Why Nginx?
-1. Faster than Apache in many cases
-
-2. Light weight and easy to configure
-
-3. Load balancer support and designed for high concurrency
+In Production folder, user can pass their github repository name while running image and the rest same as above. If user does not pass github repo name a sample website is cloned from my [github repo](https://github.com/Vedant-Mhatre/Sample-Html-Css-Website)
 
 
 ## Technologies
 Project is created with:
 * Docker: 19.03.12
-* Alpine: 3.12.0
 
 	
 ## Setup
