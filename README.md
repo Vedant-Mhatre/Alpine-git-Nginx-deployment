@@ -32,6 +32,7 @@ cd Alpine-git-Nginx-deployment
 Step 2:
 Build image with name runtime-server and tag v1, '.' specifies to location of dockerfile 
 ```
+cd Production
 docker build -t runtime-server:v1 .
 ```
 
@@ -46,6 +47,7 @@ docker run -e REPONAME=2nd-Sample-Html-Css-Website -p 8081:80 -itd runtime-serve
 Step 2:
 Pass the name of your github repository name(without https:// and .git part) and build image with name buildtime-server and tag v1, '.' specifies to location of dockerfile 
 ```
+cd Development
 docker build --build-arg REPONAME=2nd-Sample-Html-Css-Website -t buildtime-server:v1 .
 ```
 
