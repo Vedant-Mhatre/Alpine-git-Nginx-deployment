@@ -41,6 +41,7 @@ Pass the name of your github repository name(without https:// and .git part) usi
 ```
 docker run -e REPONAME=2nd-Sample-Html-Css-Website -p 8081:80 -itd runtime-server:v1
 ```
+The website will be hosted on localhost:8081
 
 <h2>To pass github repository name on build time: </h2>
 
@@ -56,3 +57,5 @@ Pass the name of your github repository name(without https:// and .git part) usi
 ```
 docker run -itd -p 8081:80 buildtime-server:v1
 ```
+
+The website will be hosted on localhost:8081
