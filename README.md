@@ -24,18 +24,33 @@ To run this project, install it locally run the following commands:
 Step 1:
 Clone this github repo and change directory 
 ```
-$ git clone https://github.com/Vedant-Mhatre/Alpine-git-Nginx-deployment.git
-$ cd Alpine-git-Nginx-deployment
+git clone https://github.com/Vedant-Mhatre/Alpine-git-Nginx-deployment.git
+cd Alpine-git-Nginx-deployment
 ```
+<h2>To pass github repository name on run time: </h2>
 
 Step 2:
-Build image with name alpine and tag v1, '.' specifies to location of dockerfile 
+Build image with name runtime-server and tag v1, '.' specifies to location of dockerfile 
 ```
-$ docker build -t alpine:v1 .
+docker build -t runtime-server:v1 .
 ```
 
 Step 3:
-Run the built image and connect it to your localhost on port 8081
+Pass the name of your github repository name(without https:// and .git part) using -e and connect it to your localhost on port 8081
 ```
-$ docker run -d -p 8081:80 alpine:v1
+docker run -e REPONAME=2nd-Sample-Html-Css-Website -p 8081:80 -itd runtime-server:v1
+```
+
+<h2>To pass github repository name on build time: </h2>
+
+Step 2:
+Pass the name of your github repository name(without https:// and .git part) and build image with name buildtime-server and tag v1, '.' specifies to location of dockerfile 
+```
+docker build --build-arg REPONAME=2nd-Sample-Html-Css-Website -t buildtime-server:v1 .
+```
+
+Step 3:
+Pass the name of your github repository name(without https:// and .git part) using -e and connect it to your localhost on port 8081
+```
+docker run -itd -p 8081:80 buildtime-server:v1
 ```
