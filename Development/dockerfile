@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine AS builder
 ARG REPONAME=Sample-Html-Css-Website
 ENV REPONAME=$REPONAME
 
@@ -17,8 +17,12 @@ RUN	adduser -D -g 'www' www && \
 	mv nginx.conf /etc/nginx/nginx.conf
 
 RUN	cd /www/ && \
-	git clone https://github.com/Vedant-Mhatre/${REPONAME}.git	
+	git clone https://github.com/Vedant-Mhatre/${REPONAME}.git
 
-RUN sed -i "s/Sample-Html-Css-Website/${REPONAME}/" /etc/nginx/nginx.conf 
+RUN sed -i "s/Sample-Html-Css-Website/${REPONAME}/" /etc/nginx/nginx.conf
+
+FROM alpine
+
+
 
 CMD ["nginx"]
