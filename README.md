@@ -4,6 +4,8 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [To Do](#todo)
+
 
 ## General info
 This project uses alpine linux which uses it to clone a repository and deploys those static web files using nginx as server.
@@ -59,3 +61,8 @@ docker run -itd -p 8081:80 buildtime-server:v1
 ```
 
 The website will be hosted on localhost:8081
+
+## To Do
+
+- [] For development part use bind mounts 
+- [] For production part use volumes 
