@@ -4,7 +4,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [To Do](#todo)
+* [To Do](#to-do)
 
 
 ## General info
@@ -64,5 +64,5 @@ The website will be hosted on localhost:8081
 
 ## To Do
 
-- [] For development part use bind mounts 
-- [] For production part use volumes 
+- [ ] For development part use bind mounts 
+- [ ] For production part use volumes 
