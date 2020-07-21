@@ -60,6 +60,11 @@ Pass the name of your github repository name(without https:// and .git part) usi
 docker run -itd -p 8081:80 buildtime-server:v1
 ```
 
+To run using mount command:
+```
+docker container create --name newvolumetest -it -p 8081:80 --mount source=tempvol,target=/app buildtime-server:v2
+docker container start newvolumetest
+```
 The website will be hosted on localhost:8081
 
 ## To Do
